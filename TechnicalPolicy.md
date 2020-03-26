@@ -144,7 +144,7 @@ Git is assuredly complicated. There are ways to make it easier to use:
 	1. `git lfs install`
 	2. Alternatively, use `git-lfs-install`, available via _WorkFolder_, which will install Lfs and also add tracking of common binary files such as Tga, Jpg, Fbx, etc.
 1. Should branch from `develop`.
-  1. You can branch from a specific branch using git-flow: `git-flow -b source-branch my-branch`.
+	1. You can branch from a specific branch using git-flow: `git-flow -b source-branch my-branch`.
 	1. The default source branch is `develop`.
 	1. Do not branch from `master`.
 1. Do not make any changes to any git work-flow without discussing with Cto first.
@@ -198,107 +198,70 @@ For example of style requirements, see other canonical repositories like [Flow](
 Feel free to correct any problems and submit a _Pull Request_.
 
 1. All coders should use [_ReSharper Pro_](https://www.jetbrains.com/resharper/).
-
 2. Must use spaces rather than tab characters.
-
   1. Tab must be 4 spaces.
      <u>Rationale</u>: Consistent readability across all platforms and editors, both local and remote, such as GitHub Pull Requests.
-     
   4. You will be fired if you mix tabs and spaces in the same file.
-
 4. If a given code-line has over 90 characters, it should be wrapped.
      1. If it has over 110 it must be wrapped.
    <u>Rationale</u>: Readability within the context of a vertically-split tab in _Visual Studio_.
-   
 5. Do read other internal code bases.
    <u>Rationale</u>: Learn the specs.
-   
 6. Do follow syntax and formatting conventions used in any file you modify, even if doing so contravenes conventions stated in this document.
      1. If it&#39;s an internal file, follow convention of the local file and make a separate PR for the formatting change.
    <u>Rationale</u>: Commits should be atomic. Separate logical changes/additions from formatting changes.
-   
 7. Do use your intuition after reading common libraries such as [Flow](https://github.com/cschladetsch/Flow).
    <u>Rationale</u>: I am not going to write pages and pages of explicit instructions about how to write and format every aspect of C# code.
    The standards for C#, and C# itself, changes over time, so that is a pointless endeavor in any case.
    Read existing code and always follow conventions around any changes you make, even if they contradict what is in this document.
-   
 8. Do not make arbitrary formatting changes which pollute the git commit history.
      1. Put these in a new commit called &quot;Reformatting&quot;.
      2. Such commits must not change any logic.
-     
 9. Should provide complexity guarantees using [_big-O notation_](https://en.wikipedia.org/wiki/Big_O_notation) for all properties or methods that are prefixed with _Calc_.
    <u>Rationale</u>: Allows a developer to know what he&#39;s in for.
-   
 10. Namespaces must use UpperCamelCase.
     <u>Rationale</u>: Consistency in naming.
-    
 11. Assemblies that may be consumed by other projects must use a unique top-level namespace.
     <u>Rationale</u>: If an assembly is not consumed by another project, it doesn&#39;t matter what namespace it uses. Conversely, it does matter.
-    
 13. All symbols should be in a namespace.
-
 13. All public classes, interfaces, delegates, and enumerations in an assembly must have [_Xml comments_](https://docs.microsoft.com/en-us/visualstudio/ide/reference/generate-xml-documentation-comments?view=vs-2019).
     <u>Rationale</u>: Provide more information to the reader.
-    
 14. All other public symbols should also have Xml Comments.
     <u>Rationale</u>: Provide more information to the reader. Also will help any automation tools used to produce documentation.
-    
 15. **Enumerations** must start with the letter &#39;E&#39;.
     <u>Rationale</u>: Makes it clear to the reader that the given symbol name is an Enumeration type.
-    
 16.  **Interfaces** must start with the letter &#39;I&#39; (capital-i).
     <u>Rationale</u>: Makes it clear to the reader that the given symbol name is an Interface type.
-    
 17.  **Public** methods must use UpperCamelCase in verb-noun form.
       1. `GetFoo` implies either a fast lookup or an immediate return.
       1. `CalcFoo` implies that work has to be done to get a result.
 Do not use a property that does much work every time it is referenced.
       1. `FetchFoo` implies that work _may_ be done to get a result.
-     
 19. **Protected** fields must use \_UnderUpperCamelCase.
-
 20. **Private** fields must use \_underLowerCamelCase.
-
 21. **Arguments and local variables** must use lowerCamelCase.
-
 22. **Constant/Static** fields must use the same conventions as above.
-
 21. All expression bodies must go on the next line.
 	
 	1. Longer expressions must use a code-block.
-	
   24. Stops situations like: one method has an expression body on same line, the next one has an expression body on the next line, the next has a code block.
-
 25. Should May use braces {} on single-line code-blocks.
-
 26. Must add a space after keywords.
-
 27. No spaces around multiplicative operators like \* and /.
-
 28. Space around additive operators like + and -.
-
 29. Group expressions in parentheses if evaluation order is not clear.
-
 30. Must use [Allman-style](http://syque.com/cstyle/ch6.7.htm) braces.
-
 28. Do not curse or use disparaging remarks or slang or emotes in code or comments.
     `// wtf is this shit :( ← um, no.`
-    
 32. Should not commit commented-out code.
-
 30. Sentences in log messages and comments should end with a full-stop.
     <u>Rationale</u>: This makes it clear when the message has correctly ended and was not abruptly terminated.
-    
 34. Do not use a property that does much work every time it is referenced.
-
 32. All `usings` must be within a namespace.
     <u>Rationale</u>: This avoids any ambiguity early.
-    
 33. Add a newline after a code block or `var` statement sequence.
     <u>Rationale</u>: Consistency.
-    
 37. Must not have empty newlines in empty blocks.
-
 35. Should not have newlines in `using` sequences.
     <u>Rationale</u>: Save vertical whitespace.
 
