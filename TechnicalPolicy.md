@@ -18,9 +18,9 @@ It has a free _MIT_ license so it can be used as a basis for other companies tha
 
 | Version | Notes |
 | --- | --- |
-| 0.2 | Peer reviewed & published. |
+| 0.2 | Peer reviewed. |
 | 0.4 | Add numbered references to clauses. |
-| 0.5 | Simplified Abstract and Introduction text, new recursive Glossary, added and refined terms. |
+| 0.5 | Simplified *Abstract* and *Introduction* text, new recursive *Glossary*, added and refined terms. |
 | 0.6 | Made publicly editable. |
 | 0.7 | Made public. |
 | 0.8 | Converted to Markdown. |
@@ -208,13 +208,15 @@ Feel free to correct any problems and submit a _Pull Request_.
   4. You will be fired if you mix tabs and spaces in the same file.
 
 5. If a given code-line has over 90 characters, it should be wrapped.
-   1. If it has over 110 it must be wrapped. <u>Rationale</u>: Readability within the context of a vertically-split tab in _Visual Studio_.
-
+   
+1. If it has over 110 it must be wrapped. <u>Rationale</u>: Readability within the context of a vertically-split tab in _Visual Studio_.
+   
 6. Do read other internal code bases. <u>Rationale</u>: Learn the specs.
 
 7. Do follow syntax and formatting conventions used in any file you modify, even if doing so contravenes conventions stated in this document.
-   1. If it&#39;s an internal file, follow convention of the local file and make a separate PR for the formatting change. <u>Rationale</u>: Commits should be atomic. Separate logical changes/additions from formatting changes.
-
+   
+1. If it&#39;s an internal file, follow convention of the local file and make a separate PR for the formatting change. <u>Rationale</u>: Commits should be atomic. Separate logical changes/additions from formatting changes.
+   
 8. Do use your intuition after reading common libraries such as [Flow](https://github.com/cschladetsch/Flow). <u>Rationale</u>: I am not going to write pages and pages of explicit instructions about how to write and format every aspect of C# code.
    The standards for C#, and C# itself, changes over time, so that is a pointless endeavor in any case.
    Read existing code and always follow conventions around any changes you make, even if they contradict what is in this document.
@@ -246,7 +248,7 @@ Feel free to correct any problems and submit a _Pull Request_.
 18. **Public** methods must use UpperCamelCase in verb-noun form.
        1. `GetFoo` implies either a fast lookup or an immediate return.
        1. `CalcFoo` implies that work has to be done to get a result.
-      Do not use a property that does much work every time it is referenced.
+        Do not use a property that does much work every time it is referenced.
        1. `FetchFoo` implies that work _may_ be done to get a result.
 
 19. **Protected** fields must use \_UnderUpperCamelCase.
