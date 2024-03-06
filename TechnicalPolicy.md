@@ -44,7 +44,7 @@ _Must_ becomes _Should,_ and _Required_ becomes _May_ in relation to third-party
 
 This is a proposed canonical standards document for how things are created, stored and referenced within a software-based company.
 
-Standards such as these help reduce communication error, inform developers on how to make decisions regarding technicalities like naming conventions and project structure, and ease transition across projects.
+Standards such as this help reduce communication errors, inform developers on how to make decisions regarding technicalities like naming conventions and project structure and ease transition across projects.
 
 You may use this document as a reference when asking for a change to be made by another developer, especially when reviewing code via a [Pull Request](#3. Git).
 
@@ -53,13 +53,13 @@ Everyone in the company - or anywhere else - is free to edit this document. Just
 These rules apply only for internal development purposes.
 
 ## 1. General
-There are some common rules that apply in all cases:
+Some common rules apply in all cases:
 1. Bullet points should start with a capital and end with punctuation.
-2. Must add new clauses or sub-clauses at the end of any list in this document. <u>Rationale</u>: Existing references to clauses must not break due to reformatting of this source text.
+2. Must add new clauses or sub-clauses at the end of any list in this document. <u>Rationale</u>: Existing references to clauses must not break due to the reformatting of this source text.
 1. Should use correct English: e.g. Realise rather than Realize, etc. Consider your language usage.
 1. All general documents must be stored on [_GoogleDocs_](http://docs.google.com).
-1. Should not use spaces or any punctuation in any file-name or object-name.
-	1. Such names should consist of alpha-numeric characters only, starting with a non-numeric character, and use UpperCamelCase.
+1. Should not use spaces or any punctuation in any file name or object name.
+	1. Such names should consist of alphanumeric characters only, starting with a non-numeric character, and use UpperCamelCase.
 4. Technical documentation should be concise and correct.
 	1. Update older documentation when things change.
 	2. Internal documents stored in any git repository must use [_MarkDown_](https://en.wikipedia.org/wiki/Markdown). See *[Typora](https://typora.io/)* for a good cross-platform Markdown editor.
@@ -108,12 +108,12 @@ To that end:
 
 1. Must consult your lead before making a new project.
 1. Do not use random assets from e.g. [_Asset Store_](https://assetstore.unity.com/) without first contacting your lead.
-1. Third-party files must live wherever causes the least harm.
+1. Third-party files must live wherever cause the least harm.
 1. Do not include _Examples_ or _Tests_ from any third-party library or package in any first-party repo.
 	1. Modify `.gitignore` if you want them locally.
-	2. Do include a md that points to original asset including any samples etc.
+	2. Do include a md that points to the original asset including any samples etc.
 5. Must use `/w/bin/new-project` to make a new project.
-1. Application source files (specific to current application) must live in `Assets/App ` folder.
+1. Application source files (specific to the current application) must live in `Assets/App ` folder.
 7. Scenes live in `Assets/Scenes`.
 8. Should include a *Markdown* `Readme.md` file in every major folder that briefly describes the purpose and contents of that folder.
 9. Internal libraries are supplied as Unity3d [_Packages_](https://docs.unity3d.com/Manual/Packages.html).
@@ -125,9 +125,9 @@ To that end:
 
 ## 3. Git
 
-Using [git](https://git-scm.com/) is considered a part of professional competency. You should feel comfortable to use it without breaking things - just as much as using _Maya_ or _PhotoShop_ or _Visual Studio_ or _Unity3d_.
+Using [git](https://git-scm.com/) is considered a part of professional competency. You should feel comfortable using it without breaking things - just as much as using _Maya_ or _PhotoShop_ or _Visual Studio_ or _Unity3d_.
 
-Thankfully, there's a worm-hole within git itself. What makes it so hard to use means you can't really irrevocably break anything or lose work unless you go out of your way and do things you do not understand.
+Thankfully, there's a wormhole within git itself. What makes it so hard to use is that you can't really irrevocably break anything or lose work unless you go out of your way and do things you do not understand.
 
 At least read about [git stash](https://git-scm.com/book/en/v1/Git-Tools-Stashing) if you're unsure about things. Yes, this is extra thought and knowledge required from you.
 
@@ -193,7 +193,7 @@ Git is assuredly complicated. There are ways to make it easier to use:
 
 See reference code.
 
-For example of style requirements, see other canonical repositories like [Flow](https://github.com/cschladetsch/Flow). Note that these are a living breathing libraries, so there will be some inconsistencies.
+For an example of style requirements, see other canonical repositories like [Flow](https://github.com/cschladetsch/Flow). Note that these are living breathing libraries, so there will be some inconsistencies.
 
 Feel free to correct any problems and submit a _Pull Request_.
 
@@ -207,7 +207,7 @@ Feel free to correct any problems and submit a _Pull Request_.
 
   4. You will be fired if you mix tabs and spaces in the same file.
 
-5. If a given code-line has over 90 characters, it should be wrapped.
+5. If a given code line has over 90 characters, it should be wrapped.
    
 1. If it has over 110 it must be wrapped. <u>Rationale</u>: Readability within the context of a vertically-split tab in _Visual Studio_.
    
@@ -215,13 +215,13 @@ Feel free to correct any problems and submit a _Pull Request_.
 
 7. Do follow syntax and formatting conventions used in any file you modify, even if doing so contravenes conventions stated in this document.
    
-1. If it&#39;s an internal file, follow convention of the local file and make a separate PR for the formatting change. <u>Rationale</u>: Commits should be atomic. Separate logical changes/additions from formatting changes.
+1. If it&#39;s an internal file, follow the convention of the local file and make a separate PR for the formatting change. <u>Rationale</u>: Commits should be atomic. Separate logical changes/additions from formatting changes.
    
 8. Do use your intuition after reading common libraries such as [Flow](https://github.com/cschladetsch/Flow). <u>Rationale</u>: I am not going to write pages and pages of explicit instructions about how to write and format every aspect of C# code.
-   The standards for C#, and C# itself, changes over time, so that is a pointless endeavor in any case.
+   The standards for C#, and C# itself, changes over time, so that is a pointless endeavour in any case.
    Read existing code and always follow conventions around any changes you make, even if they contradict what is in this document.
 
-9. Do not make arbitrary formatting changes which pollute the git commit history.
+9. Do not make arbitrary formatting changes that pollute the git commit history.
      1. Put these in a new commit called &quot;Reformatting&quot;.
      2. Such commits must not change any logic.
 
@@ -237,62 +237,36 @@ Feel free to correct any problems and submit a _Pull Request_.
 14. All public classes, interfaces, delegates, and enumerations in an assembly must have [_Xml comments_](https://docs.microsoft.com/en-us/visualstudio/ide/reference/generate-xml-documentation-comments?view=vs-2019).
       <u>Rationale</u>: Provide more information to the reader.
 
-15. All other public symbols should also have Xml Comments. <u>Rationale</u>: Provide more information to the reader. Also will help any automation tools used to produce documentation.
+15. All other public symbols may also have XML comments. <u>Rationale</u>: Provide more information to the reader. Also will help any automation tools used to produce documentation.
 
 16. **Enumerations** must start with the letter &#39;E&#39;.
       <u>Rationale</u>: Makes it clear to the reader that the given symbol name is an Enumeration type.
-
 17. **Interfaces** must start with the letter &#39;I&#39; (capital-i).
       <u>Rationale</u>: Makes it clear to the reader that the given symbol name is an Interface type.
-
 18. **Public** methods must use UpperCamelCase in verb-noun form.
        1. `GetFoo` implies either a fast lookup or an immediate return.
        1. `CalcFoo` implies that work has to be done to get a result.
         Do not use a property that does much work every time it is referenced.
        1. `FetchFoo` implies that work _may_ be done to get a result.
-
 19. **Protected** fields must use \_UnderUpperCamelCase.
-
 20. **Private** fields must use \_underLowerCamelCase.
-
 21. **Arguments and local variables** must use lowerCamelCase.
-
 22. **Constant/Static** fields must use the same conventions as above.
-
 23. All expression bodies must go on the next line.
-
-      1. Longer expressions must use a code-block.
-
-  24. Stops situations like: one method has an expression body on same line, the next one has an expression body on the next line, the next has a code block.
-
-25. Should May use braces {} on single-line code-blocks.
-
+      1. Longer expressions must use a code block.
+  24. Stops situations like: one method has an expression body on the same line, the next one has an expression body on the next line, the next has a code block.
+25. Should May use braces {} on single-line code blocks.
 26. Must add a space after keywords.
-
 27. No spaces around multiplicative operators like \* and /.
-
 28. Space around additive operators like + and -.
-
-29. Group expressions in parentheses if evaluation order is not clear.
-
+29. Group expressions in parentheses if the evaluation order is not clear.
 30. Must use [Allman-style](http://syque.com/cstyle/ch6.7.htm) braces.
-
 31. Do not curse or use disparaging remarks or slang or emotes in code or comments.
-
       `// wtf is this shit :( ← um, no.`
-
 32. Should not commit commented-out code.
-
-33. Sentences in log messages and comments should end with a full-stop. <u>Rationale</u>: This makes it clear when the message has correctly ended and was not abruptly terminated.
-
+33. Sentences in log messages and comments should end with a full stop. <u>Rationale</u>: This makes it clear when the message has correctly ended and was not abruptly terminated.
 34. Do not use a property that does much work every time it is referenced.
-
 35. All `usings` must be within a namespace. <u>Rationale</u>: This avoids any ambiguity early.
-
-36. Add a newline after a code block or `var` statement sequence. <u>Rationale</u>: Consistency.
-
+36. Add a new line after a code block or `var` statement sequence. <u>Rationale</u>: Consistency.
 37. Must not have empty newlines in empty blocks.
-
 38. Should not have newlines in `using` sequences. <u>Rationale</u>: Save vertical whitespace.
-
-**Finis**
